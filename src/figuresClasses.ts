@@ -20,7 +20,7 @@ export class Triangle implements Figure {
 
   constructor(color: Color, a: number, b: number, c: number) {
     if (a <= 0 || b <= 0 || c <= 0) {
-      throw new Error('your error message');
+      throw new Error('Triangle sides must be positive numbers');
     }
 
     this.shape = 'triangle';
@@ -58,7 +58,7 @@ export class Circle implements Figure {
 
   constructor(color: Color, radius: number) {
     if (radius <= 0) {
-      throw new Error('your error message');
+      throw new Error('Radius must be a positive number');
     }
 
     this.shape = 'circle';
@@ -84,7 +84,7 @@ export class Rectangle implements Figure {
 
   constructor(color: Color, width: number, height: number) {
     if (height <= 0 || width <= 0) {
-      throw new Error('your error message');
+      throw new Error('Width and height must be positive numbers');
     }
 
     this.width = width;
